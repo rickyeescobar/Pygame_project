@@ -8,8 +8,13 @@ class AlienInvasion:
         """Initialize the game, and create game resources."""
         pygame.init()
 
+        #^brought in background settings so that the game would run.
+
         self.screen = pygame.display.set_mode((1200,800))
         pygame.display.set_caption("Alien Invasion")
+
+        #^ the object assigned above is called a surface. a Surface is a part of the screen where a game element can 
+        #be played.
 
     def run_game(self):
         """Start the main loop for the game."""
@@ -18,11 +23,16 @@ class AlienInvasion:
             for event in pygame.game.get():
                 if event.type == pygame.QUIT:
                     sys.exit()
+            #^an event is an action that the user performs while playing the game, such as pressing a key or moving
+            #the mouse. 
 
-                # Make the most recently drawn screen visible.
-                pygame.display.flip()
+            # Make the most recently drawn screen visible.
+            pygame.display.flip()
+        
+    #^ the run_game method is where the game is controlled from. 
 
 if __name__ == '__main__':
     # make a game instance, and run the game.
     ai = AlienInvasion()
     ai.run_game()
+
