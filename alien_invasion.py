@@ -24,9 +24,10 @@ class AlienInvasion:
                 if event.type == pygame.QUIT:
                     sys.exit()
             #^an event is an action that the user performs while playing the game, such as pressing a key or moving
-            #the mouse. 
+            #the mouse.  this is called an event loop.
 
-            # Make the most recently drawn screen visible.
+            # Make the most recently drawn screen visible. gives the game the illusion of appearing 
+            # like moving smoothly, animated.
             pygame.display.flip()
         
     #^ the run_game method is where the game is controlled from. 
