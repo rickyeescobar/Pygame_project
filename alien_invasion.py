@@ -18,3 +18,6 @@ class AlienInvasion:
             for event in pygame.game.get():
                 if event.type == pygame.QUIT:
                     sys.exit()
+
+                # Make the most recently drawn screen visible.
+                pygame.display.flip()
