@@ -17,6 +17,7 @@ class AlienInvasion:
         #be played.
 
         #set the background color. 
+        #color goes from 0-255 (red, green, blue)
         self.by_color = (230,230,230)
     
 
