@@ -1,16 +1,20 @@
 import sys 
 import pygame
 
+from settings import settings
+
 class AlienInvasion:
     """Overall class to manage game assets and behavior."""
 
     def __init__(self):
         """Initialize the game, and create game resources."""
         pygame.init()
+        self.settings = Settings()
 
         #^brought in background settings so that the game would run.
-    
-        self.screen = pygame.display.set_mode((1200,800))
+
+        self.screen = pygame.display.set_mode(
+            (self.settings.screen_width, self.settings.screen_height))
         pygame.display.set_caption("Alien Invasion")
 
         #^ the object assigned above is called a surface. a Surface is a part of the screen where a game element can 
@@ -32,7 +36,7 @@ class AlienInvasion:
             #the mouse.  this is called an event loop.
 
                     #redraw the screen during each pass through the loop.
-                    self.screen.fill(self.bg_color)
+                    self.screen.fill(self.settings.bg_color)
 
             # Make the most recently drawn screen visible. gives the game the illusion of appearing 
             # like moving smoothly, animated.
