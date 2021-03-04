@@ -9,3 +9,5 @@ class Settings:
         self.bg_color = (230,230,230)
 
         
+        #set the background color. 
+        #color goes from 0-255 (red, green, blue)

@@ -22,9 +22,6 @@ class AlienInvasion:
 
         #^ the object assigned above is called a surface. a Surface is a part of the screen where a game element can 
         #be played.
-
-        #set the background color. 
-        #color goes from 0-255 (red, green, blue)
     
 
     def run_game(self):
