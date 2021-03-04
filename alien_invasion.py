@@ -2,6 +2,7 @@ import sys
 import pygame
 
 from settings import settings
+from ship import ship
 
 class AlienInvasion:
     """Overall class to manage game assets and behavior."""
@@ -16,6 +17,8 @@ class AlienInvasion:
         self.screen = pygame.display.set_mode(
             (self.settings.screen_width, self.settings.screen_height))
         pygame.display.set_caption("Alien Invasion")
+
+        self.ship = Ship(self)
 
         #^ the object assigned above is called a surface. a Surface is a part of the screen where a game element can 
         #be played.
@@ -37,6 +40,7 @@ class AlienInvasion:
 
                     #redraw the screen during each pass through the loop.
                     self.screen.fill(self.settings.bg_color)
+                    self.ship.blitme()
 
             # Make the most recently drawn screen visible. gives the game the illusion of appearing 
             # like moving smoothly, animated.
