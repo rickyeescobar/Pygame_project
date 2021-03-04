@@ -25,7 +25,6 @@ class AlienInvasion:
 
         #set the background color. 
         #color goes from 0-255 (red, green, blue)
-        self.by_color = (230,230,230)
     
 
     def run_game(self):
@@ -39,8 +38,8 @@ class AlienInvasion:
             #the mouse.  this is called an event loop.
 
                     #redraw the screen during each pass through the loop.
-                    self.screen.fill(self.settings.bg_color)
-                    self.ship.blitme()
+            self.screen.fill(self.settings.bg_color)
+            self.ship.blitme()
 
             # Make the most recently drawn screen visible. gives the game the illusion of appearing 
             # like moving smoothly, animated.
