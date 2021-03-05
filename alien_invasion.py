@@ -100,13 +100,17 @@ class AlienInvasion:
         number_aliens_x = available_space_x // (2 * alien_width)
 
         # Creeate the first row of aliens. 
-        for alien_number in range(number_aliens_x):                     # we set up a loop to count aliens we need to make
-            # Create an alien and place it in the row.                  #we create new alien, set its x coords. to place in row
-            alien = Alien(self)                                         # each alien pushed right one alien width from left margin
-            alien.x = alien_width + 2 * alien_width * alien_number      #muliply aline width by 2 for space between, multiply by position
-            alien.rect.x = alien.x                                      # use aliens x attr. to set position of its rect
-            self.aliens.add(alien)                                      #add each new alien to the group aliens
+        for alien_number in range(number_aliens_x):
+            self._create_alien(alien_number)
 
+    
+    def _create_alien(self, alien_number):                             # we set up a loop to count aliens we need to make
+        """Create an alien and place it in the row."""                 #we create new alien, set its x coords. to place in row
+        alien = Alien(self)                                            # each alien pushed right one alien width from left margin
+        alien_width = alien.rect.width                                 #muliply aline width by 2 for space between, multiply by position
+        alien.x = alien_width + 2 * alien_width * alien_number         # use aliens x attr. to set position of its rect
+        alien.rect.x = alien.x                                         #add each new alien to the group aliens
+        self.aliens.add(alien) 
 
 
     def _update_screen(self):
