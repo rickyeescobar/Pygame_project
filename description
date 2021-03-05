@@ -7,4 +7,22 @@ faster than the previous fleet. If any alien hits the player's ship or reaches t
 the player loses a ship. If the player loses three ships, the game ends.
 
 
+
+
+alien_invasion.py :
+the main file. contains the AlienInvasion class. has multiple important attributes. 
+The main loop of the game runs on here. the While loop calls the 
+_check_event() (detects relevent events, ie key presses and releases), processes these events. 
+ship.update()  ()
+_update_screen(). method which redraws the screen on loop.
+
+
+settings.py:
+has an __init__() method
+contains the Settings class. controls games appearance and ship speed.
+
+
+ship.py:
+has and __init__() method, update() method, and blitme() method 
+contains the Ship class. has the image of the ship.
 '''
