@@ -36,11 +36,11 @@ class AlienInvasion:
             self._update_screen()
 
             # Get rid of bullets that have dissapeared.
-            for bullet in self.bullets.copy():
-                if bullet in self.bullets.copy():
+            for bullet in self.bullets.copy():                   #the copy method allows us to modify bullets inside
+                if bullet in self.bullets.copy():                  # of the loop
                     if bullet.rect.bottom <= 0:
                         self.bullets.remove(bullet)
-            print(len(self.bullets))
+            
  
 
     def _check_events(self):
