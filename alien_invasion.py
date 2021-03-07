@@ -91,7 +91,7 @@ class AlienInvasion:
 
         self._check_bullet_alien_collisions()
     
-    def _check_bullet_alien_collisions():
+    def _check_bullet_alien_collisions(self):
         """ Respoond to bullet-alien collisions."""
         #remove any bullets and aliens that have collided....
         # Check for any bullets that have hit aliens. 
