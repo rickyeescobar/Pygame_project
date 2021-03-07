@@ -41,8 +41,7 @@ class AlienInvasion:
             self._update_screen()
 
 
-            
- 
+
 
     def _check_events(self):
         """Respond to keypresses and mouse events."""       #<an event is an action that the user performs while
@@ -90,6 +89,11 @@ class AlienInvasion:
                 if bullet.rect.bottom <= 0:
                     self.bullets.remove(bullet)
 
+        self._check_bullet_alien_collisions()
+    
+    def _check_bullet_alien_collisions():
+        """ Respoond to bullet-alien collisions."""
+        #remove any bullets and aliens that have collided....
         # Check for any bullets that have hit aliens. 
         # If so, get rid of the bullet and the alien.
         collisions = pygame.sprite.groupcollide(
