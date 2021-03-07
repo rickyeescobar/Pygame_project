@@ -5,6 +5,7 @@ import pygame
 
 from settings import Settings
 from game_stats import GameStats
+from button import Button
 from ship import Ship
 from bullet import Bullet
 from alien import Alien
@@ -34,6 +35,9 @@ class AlienInvasion:
 
         self._create_fleet()
 
+        # make the Play Button.
+        self.play_button = Button(self, "Play")
+
         #^ the object assigned above is called a surface. a Surface is a part of the screen where a game element can 
         #be played.
     
@@ -47,7 +51,7 @@ class AlienInvasion:
                 self.ship.update()
                 self._update_bullets()
                 self._update_aliens()
-                
+
             self._update_screen()
 
 
@@ -213,6 +217,12 @@ class AlienInvasion:
         self.aliens.draw(self.screen)
         # Make the most recently drawn screen visible. gives the game the illusion of appearing 
         # like moving smoothly, animated.
+
+        # Draw the play button if the game is inactive.
+        if not self.stats.game_active:
+            self.play_button.draw_button()
+
+
         pygame.display.flip()
 
 
