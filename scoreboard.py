@@ -1,5 +1,5 @@
 import pygame.font
-from pygame.sprite improt Group
+from pygame.sprite import Group
 
 from ship import Ship
 
